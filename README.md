@@ -18,14 +18,14 @@
 
 ### <b>TUGAS 1 UAS PEMROGRAMAN ORIENTASI OBJEK</b>
 
-![img](doc/soal1.png)
+![img](soal1.png)
 
 <br> <br>
 
 
 ### <b>TUGAS 2 UAS PEMROGRAMAN ORIENTASI OBJEK</b>
 
-![img](doc/soal2.png)
+![img](soal2.png)
 
 <br> <br>
 
