@@ -29,6 +29,36 @@
 
 <br> <br>
 
+### KONFIGURASI DATABASE DI MYSQL
+
+**- #mysql -h127.0.0.1 -uroot**
+
+```
+CREATE DATABASE akademik;
+```
+```
+USE akademik;
+```
+```
+CREATE TABLE mahasiswa (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nim VARCHAR(20) NOT NULL UNIQUE,
+    nama VARCHAR(100) NOT NULL,
+    jurusan VARCHAR(50) NOT NULL,
+    angkatan VARCHAR(100) NOT NULL
+);
+```
+```
+CREATE TABLE nilai (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    mahasiswa_id INT NOT NULL,
+    mata_kuliah VARCHAR(100) NOT NULL,
+    semester INT NOT NULL,
+    nilai CHAR(2),
+    FOREIGN KEY (mahasiswa_id) REFERENCES mahasiswa(id)
+    ON DELETE CASCADE
+);
+```
 
 ### Tampilan Awal Program Saat Dijalankan / Dirunning
 ![img](awal.png)
@@ -56,7 +86,7 @@ Pada saat setelah mengklik tombol `Save`, muncul popup dengan pesan `"Data saved
 
 
 ### Tampilan Ketika Menambahkan Sebuah Data Nilai Dari Mahasiswa
-![img](doc/7.png)
+![img](tn.png)
 - Muncul form baru Data Nilai Mahasiswa : Rahmat Cihuy (312220676).
 - Mengisi field `Mata Kuliah` `Semester` `Nilai`.
 
@@ -64,14 +94,14 @@ Pada saat setelah mengklik tombol `Save`, muncul popup dengan pesan `"Data saved
 
 
 ### Tampilan Ketika Data Nilai Berhasil Disimpan 
-![img](doc/8.png)
+![img](tnb.png)
 Setelah klik Save, muncul popup `Nilai berhasil disimpan!`.
 
 <br> <br>
 
 
 ### Tampilan Ketika Setelah Selesai Penambahan Data Nilai
-![img](doc/9.png)
+![img](tnb.png)
 - Data nilai yang baru diinput muncul di tabel nilai
 - Menampilkan `ID (8)`, `Mata Kuliah (Pemrograman Web 1)`, `Semester (3)`, dan `Nilai (87)`.
 
